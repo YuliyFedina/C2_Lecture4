@@ -2,10 +2,11 @@
 using System.Configuration;
 using System.Net;
 using System.Net.Mail;
+using IoC_practice.Repository;
 
 namespace IoC_practice
 {
-    public class MessageSender
+    public class MessageSender : IMessageSender
     {
         private readonly IMessageRepository _messageRepository;
 

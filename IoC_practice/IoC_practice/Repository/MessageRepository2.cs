@@ -2,18 +2,13 @@
 
 namespace IoC_practice.Repository
 {
-    public class MessageRepository : IMessageRepository
+    public class MessageRepository2 : IMessageRepository
     {
-        private readonly List<Message> _messages; 
+        private readonly List<Message> _messages;
 
-        public MessageRepository()
+        public MessageRepository2()
         {
             _messages = new List<Message>();
-        }
-
-        public IList<Message> GetAll()
-        {
-            return _messages;
         }
 
         public void Add(Message newMessage)
@@ -29,6 +24,11 @@ namespace IoC_practice.Repository
         public void DeleteAll()
         {
             _messages.Clear();
+        }
+
+        public IList<Message> GetAll()
+        {
+           return _messages;
         }
     }
 }

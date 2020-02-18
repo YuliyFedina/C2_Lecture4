@@ -1,12 +1,13 @@
 ﻿using System;
+using IoC_practice.Repository;
 
 namespace IoC_practice
 {
     class FormHandler
     {
-        private readonly MessageRepository _repository;
+        private readonly IMessageRepository _repository;
 
-        public FormHandler(MessageRepository repository)
+        public FormHandler(IMessageRepository repository)
         {
             _repository = repository;
         }
